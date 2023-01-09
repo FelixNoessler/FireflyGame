@@ -158,12 +158,12 @@ function game_loop(screen)
                     
                     is_mowing = false
                     
-                    if x > 1e-10
+                    if x > 1e-5
                         if (newx + playersize) < 10.0
                             playerxcenter[] += playerspeed.val*x*0.5
                             is_mowing = true
                         end    
-                    elseif x < -1e-10
+                    elseif x < -1e-5
                         if newx > (-10.0 + playersize)
                             playerxcenter[] += playerspeed.val*x*0.5
                             is_mowing = true
@@ -171,12 +171,12 @@ function game_loop(screen)
                     end
                     
                     
-                    if y > 1e-10
+                    if y > 1e-5
                         if (newy + playersize) < 10.0
                             playerycenter[] += playerspeed.val*y
                             is_mowing = true
                         end    
-                    elseif y < -1e-10
+                    elseif y < -1e-5
                         if newy > (-10.0 + playersize)
                             playerycenter[] += playerspeed.val*y
                             is_mowing = true
